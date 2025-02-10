@@ -1,4 +1,5 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
+import ScrollerComp from "./components/ScrollerComp";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -23,3 +24,15 @@ export const PLASMIC = initPlasmicLoader({
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
 // PLASMIC.registerComponent(...);
+
+PLASMIC.registerComponent(ScrollerComp, {
+  name: 'ScrollerComp',
+  props: {
+    children: 'slot',
+    direction:{
+      type: 'choice',
+      options: ['left', 'right', 'up','down']
+    },
+    style:'object',
+  },
+});
