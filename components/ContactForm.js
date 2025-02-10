@@ -2,7 +2,7 @@ import React from 'react'
 function ContactForm() {
     // const [state, handleSubmit] = useForm("myzgvndp");
     const InputStyle = {
-        width: "98%", background: "transparent", border: "1px solid #575757", padding: "14px", borderRadius: "25px", fontSize: "18px", lineHeight: "25px"
+        width: "90%", background: "transparent", border: "1px solid #575757", padding: "14px", borderRadius: "25px", fontSize: "18px", lineHeight: "25px"
     }
     const labelStyle = { color: "#FCFCFC", fontSize: "16px", lineHeight: "0px", margin: "8px 0 0 0" }
     return (
