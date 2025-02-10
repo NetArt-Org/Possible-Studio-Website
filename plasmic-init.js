@@ -1,5 +1,6 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import ScrollerComp from "./components/ScrollerComp";
+import ContactForm from "./components/ContactForm";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -34,5 +35,11 @@ PLASMIC.registerComponent(ScrollerComp, {
       options: ['left', 'right', 'up','down']
     },
     style:'object',
+  },
+});
+
+PLASMIC.registerComponent(ContactForm, {
+  name: 'ContactForm',
+  props: {
   },
 });
