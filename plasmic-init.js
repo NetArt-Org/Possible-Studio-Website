@@ -2,6 +2,7 @@ import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import ScrollerComp from "./components/ScrollerComp";
 import ContactForm from "./components/ContactForm";
 import MediaBentoGrid from "./components/MediaBentoGrid";
+import CoverflowSlider from "./components/CoverflowSlider";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -44,7 +45,12 @@ PLASMIC.registerComponent(ContactForm, {
   props: {
   },
 });
-
+PLASMIC.registerComponent(CoverflowSlider, {
+  name: 'CoverflowSlider',
+  props: {
+    children: 'slot',
+  },
+});
 PLASMIC.registerComponent(MediaBentoGrid, {
   name: 'MediaBentoGrid',
   props: {
