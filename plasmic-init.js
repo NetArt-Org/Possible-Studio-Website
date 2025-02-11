@@ -1,6 +1,7 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import ScrollerComp from "./components/ScrollerComp";
 import ContactForm from "./components/ContactForm";
+import MediaBentoGrid from "./components/MediaBentoGrid";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -41,5 +42,12 @@ PLASMIC.registerComponent(ScrollerComp, {
 PLASMIC.registerComponent(ContactForm, {
   name: 'ContactForm',
   props: {
+  },
+});
+
+PLASMIC.registerComponent(MediaBentoGrid, {
+  name: 'MediaBentoGrid',
+  props: {
+    cardData:'object',
   },
 });
