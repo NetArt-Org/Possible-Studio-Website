@@ -3,6 +3,8 @@ import ScrollerComp from "./components/ScrollerComp";
 import ContactForm from "./components/ContactForm";
 import MediaBentoGrid from "./components/MediaBentoGrid";
 import CoverflowSlider from "./components/CoverflowSlider";
+import ClickToChat from "./components/ClickToChat";
+import ServiceCard from "./components/ServiceCard";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -49,6 +51,20 @@ PLASMIC.registerComponent(CoverflowSlider, {
   name: 'CoverflowSlider',
   props: {
     children: 'slot',
+  },
+});
+PLASMIC.registerComponent(ClickToChat, {
+  name: 'ClickToChat',
+  props: {
+    link: 'string',
+  },
+});
+PLASMIC.registerComponent(ServiceCard, {
+  name: 'ServiceCard',
+  props: {
+    title:'string',
+    description:'string',
+    image:'string'
   },
 });
 PLASMIC.registerComponent(MediaBentoGrid, {
