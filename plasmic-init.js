@@ -5,6 +5,7 @@ import MediaBentoGrid from "./components/MediaBentoGrid";
 import CoverflowSlider from "./components/CoverflowSlider";
 import ClickToChat from "./components/ClickToChat";
 import ServiceCard from "./components/ServiceCard";
+import TextReveal from "./components/TextReveal";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -41,7 +42,11 @@ PLASMIC.registerComponent(ScrollerComp, {
     style:'object',
   },
 });
-
+PLASMIC.registerComponent(TextReveal, {
+  name: 'TextReveal',
+  props: {
+  },
+});
 PLASMIC.registerComponent(ContactForm, {
   name: 'ContactForm',
   props: {
