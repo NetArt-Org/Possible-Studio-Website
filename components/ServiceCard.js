@@ -1,8 +1,13 @@
 import { useState } from "react";
-
+import { useRouter } from "next/navigation"; // For Next.js 13+ (App Router)
 const ServiceCard = ({ title, description, image }) => {
     const [hover, setHover] = useState(false);
-
+    const router = useRouter();
+    const handleClick = () => {
+        const formattedTitle = encodeURIComponent(title.toLowerCase().replace(/\s+/g, "-")); 
+        router.push(`/contact-us?service=${formattedTitle}`);
+    };
+    
     const styles = {
         card: {
             position: "relative",
@@ -66,6 +71,7 @@ const ServiceCard = ({ title, description, image }) => {
             style={styles.card}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
+            onClick={handleClick}
         >
             <img src={image} alt="icon" style={styles.image} />
             <div style={styles.headingCenter}>{title}</div>
