@@ -2,7 +2,6 @@ import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import ScrollerComp from "./components/ScrollerComp";
 import ContactForm from "./components/ContactForm";
 import MediaBentoGrid from "./components/MediaBentoGrid";
-import CoverflowSlider from "./components/CoverflowSlider";
 import ClickToChat from "./components/ClickToChat";
 import ServiceCard from "./components/ServiceCard";
 import TextReveal from "./components/TextReveal";
@@ -51,12 +50,6 @@ PLASMIC.registerComponent(TextReveal, {
 PLASMIC.registerComponent(ContactForm, {
   name: 'ContactForm',
   props: {
-  },
-});
-PLASMIC.registerComponent(CoverflowSlider, {
-  name: 'CoverflowSlider',
-  props: {
-    children: 'slot',
   },
 });
 PLASMIC.registerComponent(SwiperSlider, {
