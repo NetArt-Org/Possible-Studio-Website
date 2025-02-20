@@ -20,25 +20,25 @@ function SwiperSlider({ children }) {
                 }}
                 centeredSlides={true}
                 breakpoints={{
-                    400: {
-                        slidesPerView: 2,
+                    0: {
+                        slidesPerView: 1,
                         centeredSlides: false,
                         effect: "slide",
                     },
-                    900: { slidesPerView: 3, },
+                    600: { slidesPerView: 3, },
                     1024: { slidesPerView: 5, },
                 }}
                 slidesPerView={5} // Show 3 slides at a time
                 loop={true} // Infinite looping
                 autoplay={{
-                    delay: 2000, // 2 seconds per slide
+                    delay: 3000, // 2 seconds per slide
                     disableOnInteraction: false, // Continue autoplay after user interaction
                 }}
                 modules={[EffectCoverflow, Autoplay]}
                 className="mySwiper"
             >
                 {React.Children.map(children, (child, index) => (
-                    <SwiperSlide key={index} style={{ display: "flex", justifyContent: "center", margin: "20px" }}>
+                    <SwiperSlide key={index} style={{ display: "flex", justifyContent: "center", }}>
                         {child}
                     </SwiperSlide>
                 ))}
