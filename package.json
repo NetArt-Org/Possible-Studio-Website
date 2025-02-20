@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@plasmicapp/loader-nextjs": "^1.0.413",
     "next": "14.2.23",
     "react": "^18",
