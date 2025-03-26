@@ -6,6 +6,7 @@ import ClickToChat from "./components/ClickToChat";
 import ServiceCard from "./components/ServiceCard";
 import TextReveal from "./components/TextReveal";
 import SwiperSlider from "./components/SwiperSlider";
+import Animation from "./components/Animation";
 
 export const PLASMIC = initPlasmicLoader({
   projects: [
@@ -56,6 +57,13 @@ PLASMIC.registerComponent(SwiperSlider, {
   name: 'SwiperSlider',
   props: {
     children: 'slot',
+  },
+});
+PLASMIC.registerComponent(Animation, {
+  name: 'Animation',
+  props: {
+    children: 'slot',
+    animation:'string',easing:'string',delay:'string',duration:'string'
   },
 });
 PLASMIC.registerComponent(ClickToChat, {
